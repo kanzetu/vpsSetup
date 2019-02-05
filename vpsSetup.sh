@@ -39,7 +39,8 @@ tee <<- EOF
 
 EOF
 
-apt install aria2 screen curl software-properties-common wget
+apt install aria2 screen software-properties-common wget
+wget "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/aria2.conf" -O aria2.conf
 cp aria2.conf /etc/aria2.conf
 touch /etc/aria2.session
 mkdir /home/Download
