@@ -1,43 +1,5 @@
 #!/bin/bash
 
-function printTitle(){
-	termwidth="$(tput cols)"
-	for ((i = 0 ; i < $termwidth ; i++)); do
-		printf "━"
-	done
-	padding="$(printf '%0.1s' " "{1..500})"
-	printf '%*.*s %s %*.*s\n' 0 "$(((termwidth-2-${#1})/2))" "$padding" "$1" 0 "$(((termwidth-1-${#1})/2))" "$padding"
-	for ((i = 0 ; i < $termwidth ; i++)); do
-                printf "━"
-        done
-}
-
-printTitle "This is a VPS Setup Script (Debian 9 recommanded)"
-
-tee <<-EOF
-
-	☒	DO NOT run on your MAC
-
-
-EOF
-
-if [[ `read -p 'Do you READY for the script?(y/n):'` == 'n' ]]; then
-	exit
-fi
-
-
-clear
-
-printTitle "INSTALLATION		PART1"
-tee <<- EOF
-
-		The thing below will installed later
-		1.	rclone
-		2.	nodejs
-		3.	cloudcmd
-		4.	aria2
-
-EOF
 
 apt install -y aria2 screen software-properties-common wget
 wget "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/aria2.conf" -O aria2.conf
