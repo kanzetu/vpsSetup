@@ -39,7 +39,7 @@ tee <<- EOF
 
 EOF
 
-apt install aria2 screen software-properties-common wget
+apt install -y aria2 screen software-properties-common wget
 wget "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/aria2.conf" -O aria2.conf
 cp aria2.conf /etc/aria2.conf
 touch /etc/aria2.session
@@ -59,7 +59,7 @@ cd ..
 rm -r aria2-1.34.0-linux-gnu-64bit-build1 aria2-1.34.0-linux-gnu-64bit-build1.tar.bz2
 
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-apt install nodejs
+apt install -y nodejs
 
 
 
