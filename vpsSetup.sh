@@ -26,3 +26,5 @@ screen -Sdm sudo aria2c --conf-path /etc/aria2.conf
 
 wget "https://github.com/porjo/youtubeuploader/releases/download/18.15/youtubeuploader_linux_amd64.tar.gz"
 mv youtubeuploader_linux_amd64 /usr/bin/youtubeuploader
+
+curl https://i.jpillora.com/cloud-torrent! | bash
