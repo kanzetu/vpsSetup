@@ -43,4 +43,4 @@ curl -s "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/upload.sh" > 
 chmod 777 /home/Download/upload/upload.sh
 
 npm i cloudcmd -g
-screen -Sdm cmd bash -c "cloudcmd -u $user -p $pass --port 8001"
+screen -Sdm cmd bash -c "cloudcmd -a -u $user -p $pass --port 8001"
