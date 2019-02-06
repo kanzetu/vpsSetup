@@ -33,4 +33,8 @@ chmod 777 /usr/bin/youtubeuploader
 curl https://i.jpillora.com/cloud-torrent! | bash
 mkdir /home/Download/start
 mkdir /home/Download/upload
+curl -s "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/auto.sh" > /home/Download/auto.sh
+chmod 777 /home/Download/auto.sh
+screen -Sdm "sudo /home/Download/auto.sh"
 screen -Sdm "cd /home/Download && cloud-torrent -p $port -a $user:$pass" 
+
