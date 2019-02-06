@@ -3,7 +3,7 @@ user=
 pass=
 port=
 
-apt install -y screen software-properties-common wget
+apt install -y screen software-properties-common wget bzip2 make
 wget "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/aria2.conf" -O aria2.conf
 mv aria2.conf /etc/aria2.conf
 touch /etc/aria2.session
@@ -30,6 +30,7 @@ wget "https://github.com/porjo/youtubeuploader/releases/download/18.15/youtubeup
 tar xf youtubeuploader_linux_amd64.tar.gz
 mv youtubeuploader_linux_amd64 /usr/bin/youtubeuploader
 chmod 777 /usr/bin/youtubeuploader
+rm youtubeuploader_linux_amd64.tar.gz
 
 curl https://i.jpillora.com/cloud-torrent! | bash
 mkdir /home/Download/start
