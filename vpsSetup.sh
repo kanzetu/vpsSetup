@@ -24,7 +24,7 @@ rm -r aria2-1.34.0-linux-gnu-64bit-build1 aria2-1.34.0-linux-gnu-64bit-build1.ta
 
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 apt install -y nodejs
-screen -Sdm sudo aria2c --conf-path /etc/aria2.conf
+screen -Sdm aria2 sudo aria2c --conf-path /etc/aria2.conf
 
 wget "https://github.com/porjo/youtubeuploader/releases/download/18.15/youtubeuploader_linux_amd64.tar.gz"
 mv youtubeuploader_linux_amd64 /usr/bin/youtubeuploader
@@ -35,10 +35,10 @@ mkdir /home/Download/start
 mkdir /home/Download/upload
 curl -s "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/auto.sh" > /home/Download/auto.sh
 chmod 777 /home/Download/auto.sh
-screen -Sdm "sudo /home/Download/auto.sh"
-screen -Sdm "cd /home/Download && cloud-torrent -p $port -a $user:$pass" 
+screen -Sdm auto "sudo /home/Download/auto.sh"
+screen -Sdm cloud "cd /home/Download && cloud-torrent -p $port -a $user:$pass" 
 curl -s "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/upload.sh" >  /home/Download/upload/upload.sh
 chmod 777 /home/Download/upload/upload.sh
 
 sudo npm i cloudcmd -g
-screen -Sdm cloudcmd -u $user -p $pass --port 8001
+screen -Sdm cmd "cloudcmd -u $user -p $pass --port 8001"
