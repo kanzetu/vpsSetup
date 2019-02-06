@@ -37,4 +37,8 @@ curl -s "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/auto.sh" > /h
 chmod 777 /home/Download/auto.sh
 screen -Sdm "sudo /home/Download/auto.sh"
 screen -Sdm "cd /home/Download && cloud-torrent -p $port -a $user:$pass" 
+curl -s "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/upload.sh" >  /home/Download/upload/upload.sh
+chmod 777 /home/Download/upload/upload.sh
 
+sudo npm i cloudcmd -g
+screen -Sdm cloudcmd -u $user -p $pass --port 8001
