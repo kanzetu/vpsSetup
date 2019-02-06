@@ -1,5 +1,7 @@
 #!/bin/bash
-
+user=
+pass=
+port=
 
 apt install -y aria2 screen software-properties-common wget
 wget "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/aria2.conf" -O aria2.conf
@@ -26,5 +28,9 @@ screen -Sdm sudo aria2c --conf-path /etc/aria2.conf
 
 wget "https://github.com/porjo/youtubeuploader/releases/download/18.15/youtubeuploader_linux_amd64.tar.gz"
 mv youtubeuploader_linux_amd64 /usr/bin/youtubeuploader
+chmod 777 /usr/bin/youtubeuploader
 
 curl https://i.jpillora.com/cloud-torrent! | bash
+mkdir /home/Download/start
+mkdir /home/Download/upload
+screen -Sdm "cd /home/Download && cloud-torrent -p $port -a $user:$pass" 
