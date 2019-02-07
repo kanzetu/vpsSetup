@@ -14,6 +14,7 @@ wget "https://downloads.rclone.org/rclone-current-linux-amd64.deb"
 dpkg -i "rclone-current-linux-amd64.deb"
 rm rclone-current-linux-amd64.deb
 curl -s "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/complete.sh" > /opt/complete.sh
+chmod 777 /opt/complete.sh
 
 wget "https://github.com/q3aql/aria2-static-builds/releases/download/v1.34.0/aria2-1.34.0-linux-gnu-64bit-build1.tar.bz2"
 tar xf "aria2-1.34.0-linux-gnu-64bit-build1.tar.bz2"
