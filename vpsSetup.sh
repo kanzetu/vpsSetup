@@ -3,7 +3,7 @@ user=
 pass=
 port=
 
-apt install -y screen software-properties-common wget bzip2 make lbzip2
+apt install -y screen software-properties-common wget bzip2 make lbzip2  build-essential
 wget "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/aria2.conf" -O aria2.conf
 mv aria2.conf /etc/aria2.conf
 touch /etc/aria2.session
@@ -22,10 +22,10 @@ cd aria2-1.34.0-linux-gnu-64bit-build1
 make install 
 cd ..
 rm -r aria2-1.34.0-linux-gnu-64bit-build1 aria2-1.34.0-linux-gnu-64bit-build1.tar.bz2
+screen -Sdm aria2  aria2c --conf-path /etc/aria2.conf
 
 curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 apt install -y nodejs
-screen -Sdm aria2  aria2c --conf-path /etc/aria2.conf
 
 wget "https://github.com/porjo/youtubeuploader/releases/download/18.15/youtubeuploader_linux_amd64.tar.gz"
 tar xf youtubeuploader_linux_amd64.tar.gz
