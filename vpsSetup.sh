@@ -3,7 +3,7 @@ user=
 pass=
 port=
 
-apt install -y screen software-properties-common wget bzip2 make
+apt install -y screen software-properties-common wget bzip2 make lbzip2
 wget "https://raw.githubusercontent.com/kanzetu/vpsSetup/master/aria2.conf" -O aria2.conf
 mv aria2.conf /etc/aria2.conf
 touch /etc/aria2.session
